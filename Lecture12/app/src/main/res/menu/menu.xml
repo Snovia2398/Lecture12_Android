@@ -5,22 +5,22 @@
         <item
             android:id="@+id/nav_book"
             android:icon="@drawable/ic_baseline_library_books_24"
-            android:title="Home"
+            android:title="Book"
             />
         <item
             android:id="@+id/nav_return"
             android:icon="@drawable/ic_baseline_assignment_returned_24"
-            android:title="Home"
+            android:title="Return"
             />
         <item
             android:id="@+id/nav_laptop"
             android:icon="@drawable/ic_baseline_laptop_mac_24"
-            android:title="Home"
+            android:title="Laptop"
             />
         <item
             android:id="@+id/nav_voice"
             android:icon="@drawable/ic_baseline_keyboard_voice_24"
-            android:title="Home"
+            android:title="Voice"
             />
     </group>
 

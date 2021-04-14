@@ -41,19 +41,7 @@ public class MainActivity extends AppCompatActivity {
         navigationView=findViewById(R.id.nav_view);
         drawerLayout=findViewById(R.id.drawer);
 
-        toggle= new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close){
-            @Override
-            public void onDrawerClosed(View drawerView) {
-                super.onDrawerClosed(drawerView);
-                supportInvalidateOptionsMenu();
-            }
-
-            @Override
-            public void onDrawerOpened(View drawerView) {
-                super.onDrawerOpened(drawerView);
-                supportInvalidateOptionsMenu();
-            }
-        };
+        toggle= new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
@@ -62,37 +50,39 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()){
                     case R.id.nav_book:
-                        Toast.makeText(getApplicationContext(),"Book is clicked",Toast.LENGTH_LONG).show();
                         Intent intent=new Intent(MainActivity.this,BookActivity.class);
                         startActivity(intent);
+                        break;
                     case R.id.nav_return:
-                        Toast.makeText(getApplicationContext(),"Return is clicked",Toast.LENGTH_LONG).show();
                         Intent intent1=new Intent(MainActivity.this,ReturnActivity.class);
                         startActivity(intent1);
+                        break;
                     case R.id.nav_laptop:
-                        Toast.makeText(getApplicationContext(),"Laptop is clicked",Toast.LENGTH_LONG).show();
                         Intent intent2=new Intent(MainActivity.this,LaptopActivity.class);
                         startActivity(intent2);
+                        break;
                     case R.id.nav_voice:
-                        Toast.makeText(getApplicationContext(),"Voice is clicked",Toast.LENGTH_LONG).show();
                         Intent intent3=new Intent(MainActivity.this,VoiceActivity.class);
                         startActivity(intent3);
+                        break;
                     case R.id.nav_chrome_reader:
-                        Toast.makeText(getApplicationContext(),"Chrome Reader is clicked",Toast.LENGTH_LONG).show();
                         Intent intent4=new Intent(MainActivity.this,ChromeReaderActivity.class);
                         startActivity(intent4);
+                        break;
                     case R.id.nav_read_more:
-                        Toast.makeText(getApplicationContext(),"Read More is clicked",Toast.LENGTH_LONG).show();
                         Intent intent5=new Intent(MainActivity.this,ReadMoreActivity.class);
                         startActivity(intent5);
+                        break;
                     case R.id.nav_add_comment:
-                        Toast.makeText(getApplicationContext(),"Add Comment is clicked",Toast.LENGTH_LONG).show();
                         Intent intent6=new Intent(MainActivity.this,AddCommentActivity.class);
                         startActivity(intent6);
+                        break;
                     case R.id.nav_insert_comment:
-                        Toast.makeText(getApplicationContext(),"Insert comment is clicked",Toast.LENGTH_LONG).show();
                         Intent intent7=new Intent(MainActivity.this,InsertCommentActivity.class);
                         startActivity(intent7);
+                        break;
+                    default:
+                        break;
                 }
                 return true;
             }
